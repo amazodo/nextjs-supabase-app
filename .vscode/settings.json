@@ -1,0 +1,65 @@
+{
+  // 기본 에디터 설정
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.trimAutoWhitespace": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+
+  // Prettier 설정
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.endOfLine": "lf",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+
+  // ESLint 설정
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.useFlatConfig": true,
+
+  // TypeScript 설정
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.surveys.enabled": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Next.js 확장 설정
+  "javascript.preferences.importModuleSpecifierFormat": "relative",
+
+  // Tailwind CSS 클래스 정렬
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+
+  // 파일 자동 저장 (선택사항, 필요시 활성화)
+  // "files.autoSave": "afterDelay",
+  // "files.autoSaveDelay": 1000,
+
+  // 에디터 UI 설정
+  "editor.suggestSelection": "first",
+  "editor.wordBasedSuggestions": "currentDocument",
+  "editor.formatOnPaste": true
+}

@@ -1,0 +1,33 @@
+# 의존성
+node_modules/
+.next/
+dist/
+build/
+out/
+
+# 생성된 파일
+coverage/
+*.lock
+*.log
+
+# 설정 & 도구
+.claude/
+.agents/
+.vscode/
+.github/
+.husky/
+*.config.js
+*.config.ts
+.editorconfig
+.eslintignore
+.prettierignore
+.gitignore
+
+# 문서
+README.md
+CHANGELOG.md
+CLAUDE.md
+docs/
+
+# 빌드 아티팩트
+.turbo/

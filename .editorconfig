@@ -1,0 +1,30 @@
+# EditorConfig 설정
+# 모든 에디터에서 일관된 코드 스타일 유지
+
+root = true
+
+# 모든 파일
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# JavaScript/TypeScript/JSX/TSX
+[*.{js,jsx,ts,tsx}]
+indent_style = space
+indent_size = 2
+
+# JSON/YAML
+[*.{json,yaml,yml}]
+indent_style = space
+indent_size = 2
+
+# CSS/SCSS
+[*.{css,scss}]
+indent_style = space
+indent_size = 2
+
+# Markdown
+[*.md]
+trim_trailing_whitespace = false

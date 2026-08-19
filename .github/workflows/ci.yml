@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Node.js ${{ matrix.node-version }} 설정
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - name: 의존성 설치
+        run: npm ci
+
+      - name: 타입 체크
+        run: npm run type-check
+
+      - name: ESLint 검사
+        run: npm run lint
+
+      - name: 코드 포맷 검사
+        run: npm run format:check
+
+      - name: 빌드
+        run: npm run build
+
+      - name: 빌드 결과 확인
+        if: always()
+        run: |
+          if [ -d ".next" ]; then
+            echo "✅ 빌드 성공"
+          else
+            echo "❌ 빌드 실패"
+            exit 1
+          fi
